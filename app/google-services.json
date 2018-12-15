@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "430366572063",
+    "firebase_url": "https://loguide-final.firebaseio.com",
+    "project_id": "loguide-final",
+    "storage_bucket": "loguide-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430366572063:android:9423ec5503675ea8",
+        "android_client_info": {
+          "package_name": "net.loguide.loguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "430366572063-7ssp4egqm59n2ahodii89a9vqp364ivq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.loguide.loguide",
+            "certificate_hash": "acba0b855cc2d55e13a7de5a7790a1ecbacc09e5"
+          }
+        },
+        {
+          "client_id": "430366572063-ploep4t9qgtp6f5s4oi5vbouk08ibrvs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhbgh8Udc4HMhf3bA1GXv2qWadbuFE6fQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "430366572063-ploep4t9qgtp6f5s4oi5vbouk08ibrvs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
