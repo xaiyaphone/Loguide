@@ -59,6 +59,7 @@ public class SetupActivity extends AppCompatActivity {
         Countryname = (EditText) findViewById(R.id.country_name_setup);
         profileImage = (CircleImageView) findViewById(R.id.user_profile_image);
         Setup = (Button) findViewById(R.id.btn_setup);
+        loadingBar = new ProgressDialog(this);
 
         Setup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,7 +88,7 @@ public class SetupActivity extends AppCompatActivity {
                     if (dataSnapshot.hasChild("profileimage"))
                     {
                         String image = dataSnapshot.child("profileimage").getValue(String.class).toString();
-                        Picasso.get().load(image).placeholder(R.drawable.user).into(profileImage);
+                        //Picasso.get().load(image).placeholder(R.drawable.user).into(profileImage);
 
 
                     }
