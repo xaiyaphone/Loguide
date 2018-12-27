@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputContentInfo;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -30,11 +31,10 @@ public class HomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-
-        mRecyclerView = (RecyclerView)getView().findViewById(R.id.recycler_view);
-        //mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        mRecyclerView = view.findViewById(R.id.recycler_view);
+//        mRecyclerView.setHasFixedSize(true);
+       mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         mUploads = new ArrayList<>();
 
@@ -47,16 +47,22 @@ public class HomeFragment extends Fragment {
                     Upload upload = postSnapshot.getValue(Upload.class);
                     mUploads.add(upload);
                 }
-                mAdapter = new ImageAdapter(getActivity(),mUploads);
+                mAdapter = new ImageAdapter(getContext(),mUploads);
                 mRecyclerView.setAdapter(mAdapter);
+
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(getActivity(),databaseError.getMessage(),Toast.LENGTH_SHORT).show();
             }
+
+
+
         });
-        return inflater.inflate(R.layout.fragment_home,container,false);
+
+
+        return view;
 
     }
+
 }
