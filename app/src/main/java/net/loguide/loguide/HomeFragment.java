@@ -1,5 +1,6 @@
 package net.loguide.loguide;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -55,14 +56,22 @@ public class HomeFragment extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
             }
-
-
-
         });
 
+        mRecyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                detailActivity();
+            }
+        });
 
         return view;
 
+    }
+
+    private void detailActivity() {
+        Intent registerIntenet = new Intent(getActivity(), ClickActivity.class);
+        startActivity(registerIntenet);
     }
 
 }
