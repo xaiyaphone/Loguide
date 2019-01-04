@@ -16,18 +16,5 @@ public class ClickActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_click);
 
-        ActionBar actionbar = getSupportActionBar();
-        actionbar.setTitle("Loguide Package");
-        actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setDisplayShowHomeEnabled(true);
-
-        mTitle = findViewById(R.id.name_click);
-        mImageView = findViewById(R.id.image_view_click);
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        onBackPressed();
-        return true;
     }
 }

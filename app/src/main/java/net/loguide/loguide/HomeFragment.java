@@ -58,20 +58,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        mRecyclerView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                detailActivity();
-            }
-        });
-
         return view;
 
     }
-
-    private void detailActivity() {
-        Intent registerIntenet = new Intent(getActivity(), ClickActivity.class);
-        startActivity(registerIntenet);
-    }
-
 }

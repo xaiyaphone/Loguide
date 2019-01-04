@@ -1,7 +1,9 @@
 package net.loguide.loguide;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -38,16 +40,17 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         Picasso.get().load(uploadCurrent.getImageUrl()).fit().centerInside().into(holder.imageView);
 
 
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, ClickActivity.class);
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+
+                activity.startActivity(intent);
+
+            }
+        });
     }
-
-    private RecyclerView.ViewHolder mClickListener;
-
 
     @Override
     public int getItemCount() {

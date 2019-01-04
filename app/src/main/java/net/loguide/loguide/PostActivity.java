@@ -81,20 +81,7 @@ public class PostActivity extends AppCompatActivity {
             }
         });
 
-//        mTextviewShowUploads.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openImagesActivity();
-//
-//            }
-//        });
-
     }
-
-//    private void openImagesActivity() {
-//        Intent intent = new Intent(this,ImageActivity.class);
-//        startActivity(intent);
-//    }
 
     private void openFileChooser() {
         Intent intent = new Intent();

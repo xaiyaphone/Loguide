@@ -9,4 +9,17 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="loguide">sincerely,\nLoguide Team</string>
+    <string name="about_loguide">\t\t\t\tLoguide is the application that will change
+    your travel style by asking for local guide in Laos
+        and you will get the culture and way of life in Laos.\n\n
+
+        \t\t\t\tHowever Loguide is just beta test version and we hope
+        you to feedback us to make it better we will improve
+        our service to give you more than experiences.
+    </string>
+    <string name="reset_password">We will mail you a link after you
+        provide email and click the send button.
+        Please click on that link to reset your
+        password.</string>
 </resources>

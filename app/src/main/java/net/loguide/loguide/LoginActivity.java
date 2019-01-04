@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText edtEmail, edtPassword;
     private Button btnLogin;
     private TextView tvSignup;
+    private TextView resetPassword;
     private ProgressDialog loadingBar;
     private FirebaseAuth mAuth;
 
@@ -43,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         edtPassword = findViewById(R.id.Password_login);
         btnLogin = findViewById(R.id.btn_login);
         tvSignup = findViewById(R.id.tv_signup);
+        resetPassword = findViewById(R.id.reset_password);
 
         loadingBar = new ProgressDialog(this);
 
@@ -61,7 +63,15 @@ public class LoginActivity extends AppCompatActivity {
                 SendUserToRegisterActivity();
             }
         });
+
+        resetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SendUserToResetPAsswordActivity();
+            }
+        });
     }
+
 
 
     private void AllowingUserLogin()
@@ -152,6 +162,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private void SendUserToRegisterActivity() {
         Intent registerIntenet = new Intent(LoginActivity.this, SignupActivity.class);
+        startActivity(registerIntenet);
+    }
+
+    private void SendUserToResetPAsswordActivity() {
+        Intent registerIntenet = new Intent(LoginActivity.this, ResetPasswordActivity.class);
         startActivity(registerIntenet);
     }
 }
