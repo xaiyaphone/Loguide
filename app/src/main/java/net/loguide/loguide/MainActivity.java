@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     private CircleImageView NavProfileImage;
     private TextView NavProfileName;
     private ActionBarDrawerToggle actionBarDrawerToggle;
-
     private FirebaseAuth mAuth;
     private DatabaseReference UserRef;
 
@@ -75,10 +74,12 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()){
                     String name = dataSnapshot.child("fullname").getValue().toString();
-                    String Image = dataSnapshot.child("profileimage").getValue().toString();
-
                     NavProfileName.setText(name);
-                    Picasso.get().load(Image).fit().centerInside().into(NavProfileImage);
+
+                    if (dataSnapshot.child("profileimage").exists()) {
+                        String Image = dataSnapshot.child("profileimage").getValue().toString();
+                        Picasso.get().load(Image).fit().centerInside().into(NavProfileImage);
+                    }
                 }
             }
 
